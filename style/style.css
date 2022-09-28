@@ -1,9 +1,9 @@
 @keyframes moveToRight {
   0% {
     opacity: 0;
-    transform: translateX(-6.25rem); }
+    transform: translateX(-10rem); }
   80% {
-    transform: translateX(0.625rem); }
+    transform: translateX(1rem); }
   100% {
     opacity: 1;
     transform: translateX(0); } }
@@ -11,9 +11,9 @@
 @keyframes moveToLeft {
   0% {
     opacity: 0;
-    transform: translateX(6.25rem); }
+    transform: translateX(10rem); }
   80% {
-    transform: translateX(-0.625rem); }
+    transform: translateX(-1rem); }
   100% {
     opacity: 1;
     transform: translateX(0); } }
@@ -21,7 +21,7 @@
 @keyframes moveUp {
   0% {
     opacity: 0;
-    transform: translateY(6.25rem); }
+    transform: translateY(10rem); }
   100% {
     opacity: 1;
     transform: translateY(0); } }
@@ -34,10 +34,10 @@
   box-sizing: inherit; }
 
 html {
-  font-size: 100%; }
+  font-size: 62.5%; }
 
 body {
-  padding: 1.875rem;
+  padding: 3rem;
   box-sizing: border-box; }
 
 body {
@@ -48,28 +48,29 @@ body {
 
 .primary-title {
   color: #ffff;
-  margin-bottom: 2.625rem;
+  margin-bottom: 4.2rem;
   backface-visibility: hidden; }
   .primary-title--main {
     display: block;
-    font-size: 3.75rem;
+    font-size: 6rem;
     font-weight: 400;
     letter-spacing: 1.8rem;
     animation: moveToRight 1s ease-in; }
   .primary-title--sub {
     display: block;
-    font-size: 1.25rem;
+    font-size: 2rem;
     font-weight: 700;
     letter-spacing: .8rem;
     animation: moveToLeft 1s ease-in; }
 
 .btn:link, .btn:visited {
+  font-size: 1.6rem;
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 0.9375rem 0.9rem;
+  padding: .636rem 1.44rem;
   display: inline-block;
-  border-radius: 6.25rem;
+  border-radius: 10rem;
   border: none;
   transition: all 0.2s; }
 
@@ -90,15 +91,15 @@ body {
   transition: all 0.2s; }
 
 .btn:hover {
-  transform: translateY(0.1875rem);
-  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2); }
+  transform: translateY(0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
   .btn:hover::after {
     transform: scale(2);
     opacity: 0; }
 
 .btn:active {
-  transform: translateY(-0.0625rem);
-  box-shadow: 0 0.3125rem 0.625rem rgba(0, 0, 0, 0.2); }
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.498rem 1rem rgba(0, 0, 0, 0.2); }
 
 .btn--white {
   background-color: #ffff;
@@ -116,10 +117,10 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
   .header__logo-box {
     position: absolute;
-    top: 2.5rem;
-    left: 2.5rem; }
+    top: 4rem;
+    left: 4rem; }
   .header__logo-img {
-    height: 2.1875rem; }
+    height: 3.5rem; }
   .header__content {
     position: absolute;
     top: 50%;

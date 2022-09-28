@@ -3,12 +3,13 @@
 
     &:link,
     &:visited {
+        font-size: 1.6rem;
         position: relative;
         text-decoration: none;
         text-transform: uppercase;
-        padding: 0.9375rem 0.9rem;
+        padding: .636rem 1.44rem;
         display: inline-block;
-        border-radius: 6.25rem;
+        border-radius: 10rem;
         border: none;
         transition: all 0.2s;
     }
@@ -33,8 +34,8 @@
 
 
     &:hover {
-        transform: translateY(.1875rem);
-        box-shadow: 0 .625rem 1.25rem rgba(0, 0, 0, 0.2);
+        transform: translateY(.3rem);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 
 
         &::after {
@@ -44,8 +45,8 @@
     }
 
     &:active {
-        transform: translateY(-.0625rem);
-        box-shadow: 0 .3125rem .625rem rgba(0, 0, 0, 0.2);
+        transform: translateY(-.1rem);
+        box-shadow: 0 .498rem 1rem rgba(0, 0, 0, 0.2);
     }
 
     &--white {
