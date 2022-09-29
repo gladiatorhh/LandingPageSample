@@ -68,7 +68,7 @@ body {
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
-  padding: .636rem 1.44rem;
+  padding: 1rem 1.44rem;
   display: inline-block;
   border-radius: 10rem;
   border: none;
@@ -106,6 +106,35 @@ body {
   color: #777; }
   .btn--white::after {
     background-color: #ffff; }
+
+.row {
+  max-width: 114rem;
+  background-color: #eee; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row [class^=col] {
+    color: white;
+    background-color: yellowgreen;
+    padding: 1.6rem 1rem;
+    float: left; }
+    .row [class^=col]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc((2 * ((100% - 3 * 6rem) / 4)) +  6rem); }
+  .row .col-3-of-4 {
+    width: calc((3 * ((100% - 3 * 6rem) / 4)) +  2 * 6rem); }
 
 .header {
   position: relative;
