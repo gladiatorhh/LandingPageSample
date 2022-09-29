@@ -1,16 +1,14 @@
 .row {
     max-width: $grid-width;
-    background-color: #eee;
+    margin-inline: auto;
     @include clearFix;
 
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
     }
 
-    [class^=col] {
-        color: white;
-        background-color: yellowgreen;
-        padding: 1.6rem 1rem;
+    [class^="col"] {
+        padding: $default-font-size 1rem;
         float: left;
 
         &:not(:last-child) {
