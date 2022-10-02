@@ -207,6 +207,34 @@ body {
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.03); }
 
+.card {
+  perspective: 150rem;
+  -moz-perspective: 160rem;
+  height: 50rem;
+  position: relative; }
+  .card__side {
+    height: 50rem;
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden;
+    transition: all .8s;
+    top: 0;
+    left: 0; }
+    .card__side--front {
+      background-color: white; }
+    .card__side--back {
+      transform: rotateY(180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+      .card__side--back-2 {
+        background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+      .card__side--back-3 {
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
+
 .row {
   max-width: 114rem;
   margin-inline: auto; }
@@ -273,3 +301,8 @@ body {
   clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
   margin-top: -20rem;
   height: 100vh; }
+
+.section-tours {
+  padding-block: 25rem;
+  background-color: #f7f7f7;
+  margin-top: -20rem; }

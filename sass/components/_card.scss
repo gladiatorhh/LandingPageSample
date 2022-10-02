@@ -1,0 +1,45 @@
+.card {
+    perspective: 150rem;
+    -moz-perspective: 160rem;
+    height: 50rem;
+    position: relative;
+
+
+
+    &__side {
+        height: 50rem;
+        position: absolute;
+        width: 100%;
+        backface-visibility: hidden;
+        transition: all .8s;
+        top: 0;
+        left: 0;
+
+        &--front {
+            background-color: white;
+        }
+
+        &--back {
+            transform: rotateY(180deg);
+            &-1 {
+                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+            }
+
+            &-2 {
+                background-image: linear-gradient(to right bottom,$primary-green-light,$primary-green);
+            }
+
+            &-3 {
+                background-image: linear-gradient(to right bottom,$color-tertiary-light,$color-tertiary-dark);
+            }
+        }
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+}
