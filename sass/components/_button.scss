@@ -1,17 +1,18 @@
 .btn {
 
-
+    &,
     &:link,
     &:visited {
         font-size: $default-font-size;
         position: relative;
         text-decoration: none;
         text-transform: uppercase;
-        padding: 1rem 1.44rem;
+        padding: 1.5rem 4rem;
         display: inline-block;
         border-radius: 10rem;
         border: none;
         transition: all 0.2s;
+        border: none;
     }
 
     &--animated {
@@ -44,9 +45,11 @@
         }
     }
 
-    &:active {
+    &:active,
+    &:focus {
         transform: translateY(-.1rem);
         box-shadow: 0 .498rem 1rem rgba($color-black, 0.2);
+        outline: none;
     }
 
     &--white {
@@ -58,11 +61,11 @@
         }
     }
 
-    &--green{
+    &--green {
         background-color: $primary-green;
         color: $color-gray-light-2;
 
-        &::after{
+        &::after {
             background-color: $primary-green;
         }
     }
