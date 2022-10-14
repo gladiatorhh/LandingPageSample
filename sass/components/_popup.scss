@@ -1,0 +1,78 @@
+.popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba($color-black, .8);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    display: table;
+    transition: all .3s;
+
+
+    &__content {
+        background-color: $color-white;
+        width: 75%;
+        box-shadow: 0 2rem 4rem rgba($color-black, .2);
+        border-radius: .3rem;
+        overflow: hidden;
+        @include centerByPosition;
+        transform: translate(-50%, -50%) scale(.25);
+        transition: all .3s;
+    }
+
+    &__left {
+        width: 33.3333%;
+        display: table-cell;
+    }
+
+    &__right {
+        width: 66.666666%;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 3rem 5rem;
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+    }
+
+    &__text {
+        font-size: 1.5rem;
+        margin-bottom: 4rem;
+        column-count: 2;
+        column-gap: 5rem;
+        hyphens: auto;
+    }
+
+    &__close {
+
+        &:link,
+        &:visited {
+            font-size: 3rem;
+            color: $color-black;
+            text-decoration: none;
+            position: absolute;
+            right: 3rem;
+            top: 2rem;
+            line-height: 1;
+            transition: color .2s;
+        }
+
+        &:hover {
+            color: $primary-green;
+        }
+    }
+
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target &__content {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
