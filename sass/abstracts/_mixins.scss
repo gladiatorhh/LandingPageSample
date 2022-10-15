@@ -1,14 +1,65 @@
 @mixin clearFix {
-    &::after{
+    &::after {
         content: "";
         display: table;
         clear: both;
     }
 }
 
-@mixin centerByPosition{
+@mixin centerByPosition {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
+}
+
+// MEDIA QUERIES
+/*  
+0 - 600 px  => phone 
+600 - 900 px => Tablet portrait 
+900 - 1200 px => Tablet landscape
+1200 - 1800 => normal state 
+1800 < => Large screen
+
+
+Break points argument choice 
+
+-phone 
+-tab-port
+-tab-land
+-big-desktop
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint ==phone {
+        @media (max-width:37.5em) {
+            @content
+        }
+
+        ; //600px
+    }
+
+    @else if $breakpoint ==tab-port {
+        @media (max-width:56.25em) {
+            @content
+        }
+
+        ; // 900px
+    }
+
+    @else if $breakpoint ==tab-land {
+        @media (max-width:75em) {
+            @content
+        }
+
+        ; //1200px
+    }
+
+    @else if $breakpoint ==big-desktop {
+        @media (min-width:112.5em) {
+            @content
+        }
+
+        ; //1800+
+    }
 }
