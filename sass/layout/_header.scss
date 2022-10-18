@@ -1,11 +1,16 @@
 .header {
     position: relative;
     height: 95vh;
-    background-image: linear-gradient(120deg, rgba($primary-green-light, 0.8), rgba($primary-green, 0.8)), url('../img/hero.jpg');
+    background-image: linear-gradient(120deg, rgba($primary-green-light, 0.8), rgba($primary-green, 0.8)), url('../img/hero-small.jpg');
     background-size: cover;
     background-position: top;
     background-attachment: fixed;
     clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+
+    @media (min-resolution: 192dpi) and (min-width:37em),
+    (min-width:125em) {
+        background-image: linear-gradient(120deg, rgba($primary-green-light, 0.8), rgba($primary-green, 0.8)), url('../img/hero.jpg');
+    }
 
     @include respond(phone) {
         clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);

@@ -48,6 +48,11 @@
     &__radio-group {
         display: inline-block;
         width: 49%;
+
+        @include respond(tab-port){
+            display: block;
+            margin-bottom: 2rem;
+        }
     }
 
     &__radio-label {

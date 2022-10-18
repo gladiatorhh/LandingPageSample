@@ -2,13 +2,24 @@
     width: 75%;
     margin-inline: auto;
     box-shadow: 0 3rem 6rem rgba($color-black, .1);
-    background-color: rgba($color-white,.70);
+    background-color: rgba($color-white, .70);
     border-radius: .3rem;
     padding: 6rem;
     padding-left: 9rem;
     font-size: $default-font-size;
     transform: skewX(-12deg);
     margin-bottom: 8rem;
+
+    @include respond(tab-port) {
+        width: 100%;
+        padding-left: 7rem;
+    }
+
+
+    @include respond (phone) {
+        transform: skewX(0);
+
+    }
 
     &__shape {
         position: relative;
@@ -19,6 +30,11 @@
         shape-outside: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
         transform: translate(-3rem) skewX(12deg);
+
+        @include respond(phone) {
+            margin: 1rem;
+            transform: skewX(0);
+        }
     }
 
     &__picture {
@@ -54,5 +70,9 @@
     &__text {
         transform: skewX(12deg);
         backface-visibility: hidden;
+
+        @include respond(phone) {
+            transform: skewX(0);
+        }
     }
 }

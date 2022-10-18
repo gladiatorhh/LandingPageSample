@@ -2,6 +2,10 @@
     background-color: $color-gray-light-1;
     padding-block: 25rem;
     margin-top: -20vh;
+
+    @include respond(tab-prot) {
+        padding-block: 20rem;
+    }
 }
 
 .section-features {
@@ -15,34 +19,42 @@
     background-size: cover;
     clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
     margin-top: -20rem;
-    min-height: 100vh;
+    padding-block: 20rem;
 
     @include respond(tab-port) {
-        min-height: 200vh;
-        clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
-    }
-
-    @include respond(phone) {
-        clip-path: polygon(0 10%, 100% 0, 100% 80%, 0 100%);
-        min-height: 230vh;
+        clip-path: polygon(0 7%, 100% 0, 100% 93%, 0 100%);
     }
 }
 
 .section-tours {
-    padding-block: 25rem;
+    padding-top: 20rem;
+    padding-bottom: 15rem;
     background-color: $color-gray-light-1;
     margin-top: -20rem;
+
+    @include respond(tab-prot) {
+        padding-block: 20rem;
+        padding-bottom: 8rem;
+    }
 }
 
 .section-stories {
     padding-block: 15rem;
     position: relative;
+
+    @include respond(tab-prot) {
+        padding-block: 10rem;
+    }
 }
 
 .section-book {
     position: relative;
     padding-block: 15rem;
     background-image: linear-gradient(to right bottom, $primary-green-light, $primary-green);
+
+    @include respond(tab-prot) {
+        padding-block: 10rem;
+    }
 }
 
 .book {
@@ -52,8 +64,16 @@
     border-radius: .3rem;
     box-shadow: 0 1.5rem 3rem rgba($color-black, .2);
 
+    @include respond(tab-port) {
+        background-image: linear-gradient(105deg, rgba($color-white, .5) 0%, rgba($color-white, .9)100%), url('../img/nat-10.jpg');
+    }
+
     &__form {
         width: 50%;
         padding: 6rem;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
     }
 }

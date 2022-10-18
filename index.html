@@ -39,7 +39,7 @@
                 <img src="img/nat-9.jpg" class="popup__img" alt="Tour photo">
             </div>
             <div class="popup__right">
-                <a  href="#section-tours" class="popup__close">&times;</a>
+                <a href="#section-tours" class="popup__close">&times;</a>
                 <h2 class="heading-secondary u-margin-bottom-medium">Start booking now</h2>
                 <h3 class="heading-tertiary u-margin-bottom-medium">Important &ndash; Please read this terms to
                     continue</h3>
@@ -56,7 +56,7 @@
                     nulla distinctio nemo vero
                     doloribus fugiat velit ab fuga ipsum quis, modi aut doloremque sunt pariatur nisi, animi voluptas.
                     Iste. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam nobis porro iste sit fugit
-                    nostrum esse, veniam 
+                    nostrum esse, veniam
                 </p>
                 <a href="#" class="btn btn--green">Book now</a>
             </div>
@@ -100,12 +100,17 @@
                 </div>
                 <div class="col-1-of-2">
                     <div class="composition">
-                        <img src="img/nat-1-large.jpg" alt="Photo one"
-                            class="composition__photo composition__photo--p1">
-                        <img src="img/nat-2-large.jpg" alt="Photo two"
-                            class="composition__photo composition__photo--p2">
-                        <img src="img/nat-3-large.jpg" alt="Photo three"
-                            class="composition__photo composition__photo--p3">
+                        <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w" src="img/nat-1-large.jpg"
+                            alt="Photo one" class="composition__photo composition__photo--p1"
+                            sizes="(max-width:56.25em) 147px,(max-width:900px,300px">
+
+                        <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w" src="img/nat-2-large.jpg"
+                            alt="Photo one" class="composition__photo composition__photo--p2"
+                            sizes="(max-width:56.25em) 147px,(max-width:56.25em) 270px,300px">
+
+                        <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w" src="img/nat-3-large.jpg"
+                            alt="Photo one" class="composition__photo composition__photo--p3"
+                            sizes="(max-width:56.25em) 147px,(max-width:56.25em) 270px,300px">
                     </div>
                 </div>
             </div>
@@ -343,7 +348,12 @@
     </main>
     <footer class="footer">
         <div class="footer__logo-box">
-            <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
+            <picture class="footer__logo">
+                <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
+                    media="(max-width:56.25em)">
+                <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2px" src="img/logo-green-2x.png"
+                    alt="Full logo">
+            </picture>
         </div>
         <div class="row">
             <div class="col-1-of-2">
