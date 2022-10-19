@@ -12,6 +12,13 @@
     transition: all .3s;
 
 
+    @supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
+        background-color: rgba($color-black, .3);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
+
+
     &__content {
         background-color: $color-white;
         width: 75%;
